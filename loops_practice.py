@@ -1,7 +1,7 @@
-# Python Loops Practice (Clean Code)
+# Python Loops Practice (For + While)
 
 
-# Basic for loop
+# For loop
 print("For Loop:")
 for i in range(5):
     print(i)
@@ -14,17 +14,35 @@ for i in range(1, 6):
 
 
 # Range with step
-print("\nRange with step (even numbers):")
+print("\nEven Numbers:")
 for i in range(0, 10, 2):
     print(i)
 
 
-# While loop
+# While loop (basic)
 print("\nWhile Loop:")
 i = 1
 while i <= 5:
     print(i)
     i += 1
+
+
+# While loop (reverse)
+print("\nWhile Reverse:")
+i = 5
+while i > 0:
+    print(i)
+    i -= 1
+
+
+# While loop (sum)
+print("\nWhile Sum:")
+i = 1
+total = 0
+while i <= 5:
+    total += i
+    i += 1
+print("Sum:", total)
 
 
 # Loop through string
@@ -41,7 +59,7 @@ for num in lst:
     print(num)
 
 
-# Break example
+# Break (for loop)
 print("\nBreak:")
 for i in range(10):
     if i == 5:
@@ -49,10 +67,30 @@ for i in range(10):
     print(i)
 
 
-# Continue example
+# Continue (for loop)
 print("\nContinue:")
 for i in range(5):
     if i == 2:
+        continue
+    print(i)
+
+
+# Break (while loop)
+print("\nWhile Break:")
+i = 1
+while True:
+    if i == 5:
+        break
+    print(i)
+    i += 1
+
+
+# Continue (while loop)
+print("\nWhile Continue:")
+i = 0
+while i < 5:
+    i += 1
+    if i == 3:
         continue
     print(i)
 
@@ -70,21 +108,10 @@ for i in range(1, 5):
     print("*" * i)
 
 
-# Reverse loop
-print("\nReverse Loop:")
-for i in range(5, 0, -1):
+# Input based while loop
+print("\nInput Loop:")
+n = int(input("Enter a number: "))
+i = 1
+while i <= n:
     print(i)
-
-
-# Sum using loop
-n = 5
-total = 0
-for i in range(1, n + 1):
-    total += i
-print("\nSum:", total)
-
-
-# Input based loop
-n = int(input("\nEnter a number: "))
-for i in range(1, n + 1):
-    print(i)
+    i += 1
